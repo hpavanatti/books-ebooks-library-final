@@ -5,7 +5,8 @@
     <!-- <div class="form-row"> -->
         <div class="form-group">
             <label for="titulo">Título</label>
-            <input type="text" ng-class="{'is-invalid': vm.error.titulo}" ng-model="vm.registro.titulo" class="form-control" id="titulo">
+            <input type="text" ng-class="{'is-invalid': vm.error.titulo}" ng-model="vm.registro.titulo" class="form-control" id="titulo"
+            placeholder="Digite o título do livro.">
             <small ng-if="vm.error.titulo" class="invalid-feedback">
                 {{vm.error.titulo[1]}}
             </small>
@@ -14,7 +15,7 @@
     <div class="form-group">
         <label for="resumo">Resumo</label>
         <input type="text" ng-class="{'is-invalid': vm.error.resumo}" ng-model="vm.registro.resumo" class="form-control" id="resumo"
-            placeholder="Digite o resumo do livro">
+            placeholder="Digite o resumo do livro.">
         <small ng-if="vm.error.resumo" class="invalid-feedback">
             {{vm.error.resumo[1]}}
         </small>
@@ -22,7 +23,8 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="pagina">Página</label>
-            <input type="number" ng-class="{'is-invalid': vm.error.pagina}" ng-model="vm.registro.pagina" class="form-control" id="pagina">
+            <input type="number" ng-class="{'is-invalid': vm.error.pagina}" ng-model="vm.registro.pagina" class="form-control" id="pagina"
+            placeholder="Digite as páginas do livro.">
             <small ng-if="vm.error.pagina" class="invalid-feedback">
                 {{vm.error.pagina[1]}}
             </small>
@@ -30,7 +32,7 @@
         <div class="form-group col-md-6">
             <label for="edicao">Edição</label>
             <input type="text" ng-class="{'is-invalid': vm.error.edicao}" ng-model="vm.registro.edicao" class="form-control"
-                id="edicao">
+                id="edicao"  placeholder="Digite a edição do livro.">
             <small ng-if="vm.error.edicao" class="invalid-feedback">
                 {{vm.error.edicao[1]}}
             </small>
@@ -38,5 +40,6 @@
     </div>
 
     <button type="button" ng-click="vm.salvar()" class="btn btn-primary">Salvar</button>
-    <a ui-sref="livrosList" class="btn btn-danger">Cancelar</button>
+    <button ui-sref="livrosList" class="btn btn-danger">Cancelar</button>
+    <button ui-sref="colecoesNovo" class="btn btn-secondary"><span class="feather icon-arrow-left-circle"></span> Voltar a coleções</button>
 </form>

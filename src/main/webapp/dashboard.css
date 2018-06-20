@@ -33,6 +33,7 @@ body {
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
   .sidebar-sticky {
+    background-color:lightgray;
     position: -webkit-sticky;
     position: sticky;
   }
@@ -73,6 +74,10 @@ body {
 /*
  * Navbar
  */
+
+.navbar{
+  background-color: lightgrey;
+}
 
 .navbar-brand {
   padding-top: .75rem;

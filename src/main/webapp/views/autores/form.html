@@ -3,29 +3,32 @@
 </div>
 <form>
     <div class="form-group">
-        <label for="nome">Nome</label>
-        <input type="text" ng-class="{'is-invalid': vm.error.nome}" ng-model="vm.registro.nome" class="form-control" id="nome" placeholder="Digite o nome do autor">
+        <label for="nome">Nome:</label>
+        <input type="text" ng-class="{'is-invalid': vm.error.nome}" ng-model="vm.registro.nome" class="form-control" id="nome" placeholder="Digite o nome do autor.">
         <small ng-if="vm.error.nome" class="invalid-feedback">
             {{vm.error.nome[1]}}
         </small>
     </div>
     <div class="form-group">
-        <label for="link">Link Útil</label>
-        <input type="text" ng-class="{'is-invalid': vm.error.link}" ng-model="vm.registro.link" class="form-control" id="link">
+        <label for="link">Link Útil:</label>
+        <input type="text" ng-class="{'is-invalid': vm.error.link}" ng-model="vm.registro.link" class="form-control" id="link" 
+        placeholder="Digite um link útil referente ao autor.">
         <small ng-if="vm.error.link" class="invalid-feedback">
             {{vm.error.link[1]}}
         </small>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="pseudonimo">Pseudonimo</label>
-            <input type="text" ng-class="{'is-invalid': vm.error.pseudonimo}" ng-model="vm.registro.pseudonimo" class="form-control" id="pseudonimo">
+            <label for="pseudonimo">Pseudônimo:</label>
+            <input type="text" ng-class="{'is-invalid': vm.error.pseudonimo}" ng-model="vm.registro.pseudonimo" class="form-control" id="pseudonimo"
+            placeholder="Digite o pseudônimo do autor.">
             <small ng-if="vm.error.pseudonimo" class="invalid-feedback">
                 {{vm.error.pseudonimo[1]}}
             </small>
         </div>
-        <div class="form-group">
-            <label for="social">Social</label>
+        <div class="form-group col-md-6">
+            <label for="social">Escolha a Rede Social:</label>
+            <button type="button" ui-sref="sociaisNovo" class="btn btn-sm btn-link">Adicionar</button>
             <select ng-class="{'is-invalid': vm.error.social}" ng-options="item as item.nome for item in vm.sociais track by item.id"
                 ng-model="vm.registro.social" class="form-control">
             </select>
@@ -36,5 +39,6 @@
     </div>
 
     <button type="button" ng-click="vm.salvar()" class="btn btn-primary">Salvar</button>
-    <a ui-sref="autoresList" class="btn btn-danger">Cancelar</button>
+    <button ui-sref="autoresList" class="btn btn-danger">Cancelar</button>
+    <button ui-sref="colecoesNovo" class="btn btn-secondary"><span class="feather icon-arrow-left-circle"></span> Voltar a coleções</button>
 </form>

@@ -3,20 +3,21 @@
 </div>
 <form>
     <div class="form-group">
-        <label for="nome">Nome</label>
-        <input type="text" ng-class="{'is-invalid': vm.error.nome}" ng-model="vm.registro.nome" class="form-control" id="nome" placeholder="Digite o nome da rede social">
+        <label for="nome">Nome:</label>
+        <input type="text" ng-class="{'is-invalid': vm.error.nome}" ng-model="vm.registro.nome" class="form-control" id="nome" placeholder="Digite o nome da rede social.">
         <small ng-if="vm.error.nome" class="invalid-feedback">
             {{vm.error.nome[1]}}
         </small>
     </div>
     <div class="form-group">
-        <label for="link">Link Útil</label>
-        <input type="text" ng-class="{'is-invalid': vm.error.link}" ng-model="vm.registro.link" class="form-control" id="link">
+        <label for="link">Link:</label>
+        <input type="text" ng-class="{'is-invalid': vm.error.link}" ng-model="vm.registro.link" class="form-control" id="link" placeholder="Digite o link da rede social.">
         <small ng-if="vm.error.link" class="invalid-feedback">
             {{vm.error.link[1]}}
         </small>
     </div>
 
     <button type="button" ng-click="vm.salvar()" class="btn btn-primary">Salvar</button>
-    <a ui-sref="sociaisList" class="btn btn-danger">Cancelar</button>
+    <button ui-sref="sociaisList" class="btn btn-danger">Cancelar</button>
+    <button ui-sref="autoresNovo" class="btn btn-secondary"><span class="feather icon-arrow-left-circle"></span> Voltar a autores</button>
 </form>

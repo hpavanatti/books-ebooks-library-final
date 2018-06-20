@@ -32,7 +32,7 @@
         <tbody>
             <tr ng-repeat="item in vm.data.registros">
                 <td>{{item.criacao | date : 'dd/MM/yyyy HH:mm'}}</td>
-                <td>{{item.autor.nome}}</td>
+                <td>{{item.autor.pseudonimo}}</td>
                 <td>{{item.categoria}}</td>
                 <td class="text-right">
                     <a ui-sref="colecoesEditar({id: item.id})" class="btn btn-sm btn-link py-0">
